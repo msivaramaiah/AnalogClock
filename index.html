@@ -104,10 +104,10 @@ function drawTime(ctx, radius){
     hour=(hour*Math.PI/6)+
     (minute*Math.PI/(6*60))+
     (second*Math.PI/(360*60));
-    drawHand(ctx, hour, radius*0.35, radius*0.015, "red");
+    drawHand(ctx, hour, radius*0.35, radius*0.015, "blue");
     //minute
     minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
-    drawHand(ctx, minute, radius*0.75, radius*0.005, "red");
+    drawHand(ctx, minute, radius*0.75, radius*0.005, "green");
     // second
     second=(second*Math.PI/30);
     drawHand(ctx, second, radius*0.95, radius*0.002, "red");
@@ -121,7 +121,7 @@ function drawHand(ctx, pos, length, width, clr) {
     ctx.lineTo(0, -length);
     ctx.stroke();
     ctx.rotate(-pos);
-    ctx.fillStyle = clr;
+    ctx.strokeStyle = clr;
     ctx.fill();
 }</script>
 </html>
