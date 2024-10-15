@@ -119,9 +119,9 @@ function drawHand(ctx, pos, length, width, clr) {
     ctx.moveTo(0,0);
     ctx.rotate(pos);
     ctx.lineTo(0, -length);
-    ctx.stroke();
     ctx.rotate(-pos);
     ctx.strokeStyle = clr;
     ctx.fill();
+    ctx.stroke();
 }</script>
 </html>
